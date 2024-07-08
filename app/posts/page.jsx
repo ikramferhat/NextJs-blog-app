@@ -19,7 +19,7 @@ const Posts = () => {
     if (confirmed) {
       await axios({
         method: 'DELETE',
-        url: `http://localhost:3000/api/posts?id=${id}`
+        url: `https://nextjs-blog14-app.netlify.app/api/posts?id=${id}`
       })
       .then(res => {
         console.log('res dele' ,res);
@@ -34,7 +34,7 @@ const Posts = () => {
   const getPosts = async () => {
     setLoading(true)
     try {
-      await axios.get("http://localhost:3000/api/posts")
+      await axios.get("https://nextjs-blog14-app.netlify.app/api/posts")
         .then(response => {
           console.log('res',response);
           setPosts(response.data.posts);
@@ -51,7 +51,7 @@ const Posts = () => {
   const fetchPosts = async () => {
     setLoading(true)
 		try {
-			const response = await fetch('http://localhost:3000/api/posts', {
+			const response = await fetch('https://nextjs-blog14-app.netlify.app/api/posts', {
 				method: 'GET',
 			});
 			if (response.ok) {

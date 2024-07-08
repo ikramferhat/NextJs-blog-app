@@ -17,7 +17,7 @@ const Posts = () => {
     if (confirmed) {
       await axios({
         method: 'DELETE',
-        url: `http://localhost:3000/api/posts?id=${id}`
+        url: `https://nextjs-blog14-app.netlify.app/api/posts?id=${id}`
       })
       .then(res => {
         console.log('res dele' ,res);

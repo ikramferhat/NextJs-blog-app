@@ -24,7 +24,7 @@ export default function EditPost({ params }) {
   
   const formOptions = { resolver: yupResolver(validationSchema),
     defaultValues: async () => {
-        const a = await fetch(`http://localhost:3000/api/posts/${id}`);
+        const a = await fetch(`https://nextjs-blog14-app.netlify.app/api/posts/${id}`);
         const data = await a.json()
         console.log("dd==>",data)
         setPostImage(data.post.image)
@@ -56,7 +56,7 @@ export default function EditPost({ params }) {
     try {
       await axios({
         method: 'PUT',
-        url: `http://localhost:3000/api/posts/${id}`,
+        url: `https://nextjs-blog14-app.netlify.app/api/posts/${id}`,
         headers: {
             'Content-Type': 'application/json'
         },

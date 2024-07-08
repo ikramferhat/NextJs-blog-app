@@ -33,7 +33,7 @@ export default function AddPost() {
     try {
       axios({
         method: 'POST',
-        url: 'http://localhost:3000/api/posts',
+        url: 'https://nextjs-blog14-app.netlify.app/api/posts',
         data: JSON.stringify(values),
         headers: {
             'Content-Type': 'application/json'

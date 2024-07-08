@@ -12,7 +12,7 @@ export default function PostDetail({ params }) {
   const getPost = async () => {
     setLoading(true)
     try {
-      await axios.get(`http://localhost:3000/api/posts/${id}`)
+      await axios.get(`https://nextjs-blog14-app.netlify.app/api/posts/${id}`)
         .then(response => {
           console.log('res',response);
           setPost(response.data.post);
